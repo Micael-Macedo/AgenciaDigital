@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="desktop">
+                <ul>
+                    <li><a href=""></a></li>
+                </ul>
+                <ul>
+                    <li><a onclick="openDropdownMenu(this)">HOME <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>ABOUT US</li>
+                            <li>WHAT WE DO</li>
+                        </ul>
+
+
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">PAGES<i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">BLOG <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">PORTFOLIO <i><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>Web & Mobile Development</li>
+                            <li>Interaction Design</li>
+                            <li>Digital Marketing</li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">SHOP <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">CONTACT <i><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navOptions">
+                    <li><a href=""><img src="images/icons/cart.png" alt=""> </a></li>
+                    <li><a href=""><img src="images/icons/search.png" alt=""> </a></li>
+                </ul>
+            </div>
+            <div class="mobile">
+                <ul>
+                    <li><a href=""></a></li>
+                </ul>
+                <ul class="navOptions">
+                    <li><a><img src="images/icons/cart.png" alt=""> </a></li>
+                    <li><a><img src="images/icons/search.png" alt=""> </a></li>
+                    <li><a class="hamburguer" onclick="navMobile()"><img src="images/icons/icon.png" alt=""> </a></li>
+                </ul>
+            </div>
+            <div class="mobileOption">
+                <ul>
+                    <li><a onclick="openDropdownMenu(this)">HOME <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>ABOUT US</li>
+                            <li>WHAT WE DO</li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">PAGES<i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">BLOG <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">PORTFOLIO <i><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>Web & Mobile Development</li>
+                            <li>Interaction Design</li>
+                            <li>Digital Marketing</li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">SHOP <i><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a onclick="openDropdownMenu(this)">CONTACT <i><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg></i> </a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="bg bg-color1">
+                <div>
+                    <div>
+                        <h1>Digital
+                            Agency
+                            Solution</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div>
+                        <img src="images/here area.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <img src="images/partners/1.png" alt="">
+                    <img src="images/partners/2.png" alt="">
+                    <img src="images/partners/3.png" alt="">
+                    <img src="images/partners/4.png" alt="">
+                    <img src="images/partners/5.png" alt="">
+                    <img src="images/partners/6.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color2">
+                <h2>ABOUT US</h2>
+                <p class="title">We Create Digital World Class Business
+                    Agency Marketplace</p>
+                <div>
+                    <div>
+                        <img src="" alt="">
+
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore.
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color3">
+                <div>
+                    <div>
+                        <img src="" alt="">
+                        <h2>Branding<span>Design</span></h2>
+                        <p>Promotion</p>
+                        <ul>
+                            <li>Logo Design</li>
+                            <li>Business Card</li>
+                            <li>Social Media</li>
+                            <li>Advertisement</li>
+                            <li>Promotion</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h2>Interactive<span>Design</span></h2>
+                        <p>Promotion</p>
+                        <ul>
+                            <li>Logo Design</li>
+                            <li>Business Card</li>
+                            <li>Social Media</li>
+                            <li>Advertisement</li>
+                            <li>Promotion</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h2>Illustration<span>Design</span></h2>
+                        <p>Promotion</p>
+                        <ul>
+                            <li>Logo Design</li>
+                            <li>Business Card</li>
+                            <li>Social Media</li>
+                            <li>Advertisement</li>
+                            <li>Promotion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color1">
+                <div>
+                    <div>
+                        <h2>PORTFOLIO</h2>
+                        <p class="title">
+                            We create places that
+                            connect, sustain & inspire
+                        </p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button>VIEW ALL PORTFOLIO</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>01.</p>
+                        <h3>Web & Mobile Development</h3>
+                    </div>
+                    <div>
+                        <p>02.</p>
+                        <h3>Interaction Design</h3>
+                    </div>
+                    <div>
+                        <p>03.</p>
+                        <h3>Digital Marketing</h3>
+                    </div>
+                    <div>
+                        <p>04.</p>
+                        <h3>Branding & Strategy</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color1">
+                <div>
+                    <div>
+                        <h2>OUR TEAM</h2>
+                        <p class="title">Builds Our Future
+                            Experience Team Members</p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore .</p>
+                        <div>
+                            <button></button>
+                            <button></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div><img src="images/Aimee.png" alt="">
+                        <h3>Aimee Calderon</h3>
+                        <p>Web Developer</p>
+                    </div>
+                    <div><img src="images/Raymond.png" alt="">
+                        <h3>Raymond Horn</h3>
+                        <p>Digital Marketer</p>
+                    </div>
+                    <div><img src="images/Linda.png" alt="">
+                        <h3>Linda Towner</h3>
+                        <p>App Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color1">
+                <div>
+                    <div>
+                        <h2>TESTIMONIALS </h2>
+                        <p class="title">
+                            Feedback From Our Clients
+                        </p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <button>VIEW ALL PORTFOLIO</button>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <p></p>
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p></p>
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg bg-color1">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="bg bg-color1">
+            <div>     
+                <div></div>
+                <div>
+                    <h2>QUICK LINKS</h2>
+                    <div>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Pricing Table</li>
+                            <li>Contact Us</li>
+                            <li>Meet Our Team</li>
+                            <li>Latest News</li>
+                        </ul>
+                        <ul>
+                            <li>Case Studies</li>
+                            <li>FAQ’s</li>
+                            <li>Services</li>
+                            <li>Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>© 2023 davixq All Rights Reserved</h2>
+                <div>
+                    <p>Terms of Use</p>
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

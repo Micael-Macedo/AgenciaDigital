@@ -1,0 +1,201 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin spaceCenter($align) {
+    display: flex;
+    align-items: $align;
+    justify-content: center;
+}
+
+@mixin spaceCenter($align) {
+    display: flex;
+    align-items: $align;
+    justify-content: center;
+}
+
+@mixin spaceAround($align) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-around;
+}
+
+@mixin spaceBetween($align) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-between;
+}
+
+@mixin spaceEvenly($align) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-evenly;
+}
+
+@mixin column() {
+    flex-direction: column;
+}
+
+$PrimaryColor: #111111;
+$SecondColor: #E3B27D;
+$ThirdColor: #FFFFFF;
+$ForthColor: #222222;
+$FifthColor: #888888;
+$SixthColor: #181818;
+
+header {
+    width: 100vw;
+    height: 12vh;
+    background-color: $PrimaryColor;
+    position: fixed;
+
+    nav {
+        height: 100%;
+        @include spaceCenter(center);
+        padding: 0% 5%;
+
+        .mobile, .mobileOption{
+            display: none;
+        }
+
+        div{
+            width: 100%;
+            @include spaceBetween(center);
+
+            ul {
+                @include spaceBetween(center);
+                list-style: none;
+                gap: 10px;
+
+                li {
+                    a {
+                        @include spaceCenter(center);
+                        gap: 5px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: $ThirdColor;
+                        text-decoration: none;
+                        transition: 0.2s;
+                        cursor: pointer;
+
+                        i {
+                            @include spaceCenter(center);
+                            transition: 0.5s;
+                        }
+
+                        &:hover {
+                            color: $SecondColor;
+                            fill: $SecondColor;
+                        }
+                        &.selected{
+                            color: $SecondColor;
+                            fill: $SecondColor;
+                            i{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    ul.dropdown-menu{
+                        display: none;
+                    }
+                    ul.dropdown-menu.open{
+                        display: flex;
+                        position: absolute;
+                        @include column();
+                        top: 80%;
+                        text-align: center;
+                        background-color: $PrimaryColor;
+                        border: 2px solid $SecondColor;
+                        border-radius: 2px;
+                        li{
+                            width: 100%;
+                            padding: 2%;
+                            font-size: 14px;
+                            color: $ThirdColor;
+                            margin-bottom: 2px solid $FifthColor;
+                        }
+                    }
+                }
+
+            }
+
+            ul.navOptions {
+                @include spaceBetween(center);
+
+                li {
+                    @include spaceCenter(center);
+                    width: 45px;
+                    height: 45px;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+
+                        &.hamburguer {
+                            background-color: $FifthColor;
+                            border-radius: 50%;
+                        }
+                    }
+
+                }
+            }
+        }
+        @media (max-width:768px) {
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                @include spaceBetween(center);
+            } 
+            .mobileOption{
+                @include spaceCenter(start);
+                display: none;
+                position: fixed;
+                top: 12vh;
+                height: 88vh;
+                background-color: $FifthColor;
+                ul{
+                    width: 100%;
+                    @include column();
+                    gap: 0;
+                    li{
+                        border-bottom: 2px solid $PrimaryColor;
+                        background-color: $ForthColor;
+                        width: 100%;
+                        padding: 2% 0;
+                        
+                    }
+                    &.dropdown-menu.open{
+                        position: relative;
+                    
+                    }
+                }
+                &.open{
+                    display: flex;
+                }
+              }
+        }
+    }
+}
+main{
+    padding-top: 12vh;
+  }
+section {
+    .bg {
+        padding: 5%;
+        color: $ThirdColor;
+        &.bg-color1 {
+            background-color: $PrimaryColor;
+        }
+        &.bg-color2 {
+            background-color: $SixthColor;
+        }
+        &.bg-color3 {
+            background-color: $ForthColor;
+        }
+
+
+    }
+}
