@@ -101,20 +101,23 @@ header {
                         display: none;
                     }
                     ul.dropdown-menu.open{
+                        width: 30%;
                         display: flex;
                         position: absolute;
                         @include column();
                         top: 80%;
                         text-align: center;
                         background-color: $PrimaryColor;
-                        border: 2px solid $SecondColor;
+                        border-left: 3px solid $SecondColor;
                         border-radius: 2px;
                         li{
-                            width: 100%;
-                            padding: 2%;
+                            min-width: 200px;
+                            width: 90%;
+                            padding: 2% 0% 2% 4px;
                             font-size: 14px;
                             color: $ThirdColor;
                             margin-bottom: 2px solid $FifthColor;
+                            text-align: left;
                         }
                     }
                 }

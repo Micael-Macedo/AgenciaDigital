@@ -2,7 +2,7 @@ function openDropdownMenu(option) {
     let selected = $(option).parents("li").children("ul");
     $(".desktop").find("a").removeClass("selected");
     $(".mobile").find("a").removeClass("selected");
-    $(option).addClass("selected");
+    $(option).toggleClass("selected");
     $(".dropdown-menu").removeClass("open");
     $(selected).toggleClass("open");
 

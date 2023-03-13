@@ -66,21 +66,24 @@ header nav div ul li ul.dropdown-menu {
   display: none;
 }
 header nav div ul li ul.dropdown-menu.open {
+  width: 30%;
   display: flex;
   position: absolute;
   flex-direction: column;
   top: 80%;
   text-align: center;
   background-color: #111111;
-  border: 2px solid #E3B27D;
+  border-left: 3px solid #E3B27D;
   border-radius: 2px;
 }
 header nav div ul li ul.dropdown-menu.open li {
-  width: 100%;
-  padding: 2%;
+  min-width: 200px;
+  width: 90%;
+  padding: 2% 0% 2% 4px;
   font-size: 14px;
   color: #FFFFFF;
   margin-bottom: 2px solid #888888;
+  text-align: left;
 }
 header nav div ul.navOptions {
   display: flex;
