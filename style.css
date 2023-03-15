@@ -3,6 +3,7 @@
   padding: 0%;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  max-width: 100%;
 }
 * button {
   background-color: transparent;
@@ -122,56 +123,6 @@ header nav div ul.navOptions li a.hamburguer {
   background-color: #888888;
   border-radius: 50%;
 }
-@media (max-width: 768px) {
-  header nav .desktop {
-    display: none;
-  }
-  header nav .mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header nav .mobileOption {
-    width: 100vw;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    display: none;
-    position: fixed;
-    top: 10vh;
-    height: 90vh;
-    background-color: #222222;
-  }
-  header nav .mobileOption.open {
-    display: flex;
-  }
-  header nav .mobileOption ul {
-    width: 100%;
-    flex-direction: column;
-    gap: 0;
-  }
-  header nav .mobileOption ul div.navMenu li {
-    border-bottom: 2px solid #111111;
-    background-color: #222222;
-    width: 100%;
-    padding: 2% 0;
-  }
-  header nav .mobileOption ul div.navMenu ul.dropdown-menu.open {
-    display: flex;
-    width: 100%;
-    position: static;
-    border-left: none;
-  }
-  header nav .mobileOption ul div.navMenu ul.dropdown-menu.open li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 100%;
-    padding: 0%;
-    background-color: #888888;
-  }
-}
 
 main {
   padding-top: 10vh;
@@ -179,6 +130,8 @@ main {
 
 .bg {
   padding: 6% 5%;
+  height: -moz-fit-content;
+  height: fit-content;
   color: #FFFFFF;
   position: relative;
 }
@@ -201,18 +154,17 @@ section .HomeContent {
   justify-content: space-between;
   font-weight: 500;
 }
-section .HomeContent h1 {
+section .HomeContent .homeText {
+  max-width: 100%;
+}
+section .HomeContent .homeText h1 {
   font-size: 90px;
   line-height: 135%;
 }
-section .HomeContent p {
-  max-width: 100%;
+section .HomeContent .homeText p {
   width: 470px;
   font-size: 20px;
   line-height: 140%;
-}
-section .HomeContent .homeText {
-  width: 40%;
 }
 section .HomeContent .homeText .scroll {
   margin-top: 43px;
@@ -226,11 +178,9 @@ section .HomeContent .homeText .scroll {
 section .HomeContent .homeText .scroll i {
   transform: rotate(90deg);
 }
-section .HomeContent div {
-  width: 60%;
-}
-section .HomeContent div img {
-  width: 90%;
+section .HomeContent .homeImage img {
+  max-width: 100%;
+  width: 50%;
 }
 section .logoPartners {
   display: flex;
@@ -260,7 +210,6 @@ section .headerSection .sectionTitle p.title {
   font-weight: 600;
   font-size: 30px;
   line-height: 135%;
-  max-width: 70%;
 }
 section .headerSection .rightContent {
   width: 60%;
@@ -290,6 +239,7 @@ section .contentBetween {
   display: flex;
   align-items: top;
   justify-content: space-between;
+  padding-bottom: 100px;
 }
 section .contentBetween .contentText {
   width: 30%;
@@ -302,31 +252,37 @@ section .contentCenter {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
 }
-section .contentCenter.agenceInfo {
+section .contentCenter div.agenceInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 80px;
   width: 30%;
   background-color: #333333;
   height: 200px;
   text-align: center;
   position: absolute;
-  bottom: 5%;
-  left: 45%;
+  bottom: 20%;
+  left: 40%;
 }
-section .contentCenter.agenceInfo h3 {
+section .contentCenter div.agenceInfo h3 {
   font-size: 40px;
 }
-section .contentCenter.agenceInfo p {
+section .contentCenter div.agenceInfo p {
   color: #AAAAAA;
   font-size: 16px;
 }
 section .contentCenter.ourWork {
   gap: 20px;
+  flex-wrap: wrap;
 }
 section .contentCenter.ourWork div {
   position: relative;
   width: 30%;
+  max-width: 100%;
+  min-width: 288px;
 }
 section .contentCenter.ourWork div img {
   position: absolute;
@@ -366,11 +322,16 @@ section .portfolio div.portfolioDivision {
   align-items: top;
   justify-content: space-between;
   margin-bottom: 35px;
-  height: 110px;
+  padding-bottom: 38px;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 section .portfolio div.portfolioDivision div {
   width: 100%;
+  max-width: 100%;
 }
 section .portfolio div.portfolioDivision div p {
   font-weight: 500;
@@ -379,6 +340,8 @@ section .portfolio div.portfolioDivision div p {
   position: relative;
 }
 section .portfolio div.portfolioDivision div h3 {
+  height: -moz-fit-content;
+  height: fit-content;
   padding-left: 3%;
   font-weight: 600;
   font-size: 50px;
@@ -393,6 +356,9 @@ section .ourTeam {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+section .ourTeam img {
+  max-width: 100%;
 }
 section .ourTeam p {
   color: #888888;
@@ -437,8 +403,11 @@ section .updatesblog {
   gap: 76px 76px;
 }
 section .updatesblog .post {
-  width: 42%;
-  height: 129px;
+  max-width: 100%;
+  width: 420px;
+  min-height: 129px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 section .updatesblog .post div {
   display: flex;
@@ -461,6 +430,7 @@ section .updatesblog .post div .time {
   color: #E3B27D;
 }
 section .updatesblog .post .title {
+  max-width: 100%;
   margin-top: 17px;
   font-weight: 600;
   font-size: 35px;
@@ -470,9 +440,11 @@ section .contactUs {
   width: 100%;
   height: 500px;
   position: relative;
+  padding-bottom: 10%;
 }
 section .contactUs img {
   width: 100%;
+  height: auto;
   position: relative;
   left: 5.55%;
 }
@@ -491,12 +463,14 @@ section .contactUs div {
 section .contactUs div h2 {
   width: 70%;
 }
-section .contactUs div h2, section .contactUs div span {
+section .contactUs div h2,
+section .contactUs div span {
   font-weight: 600;
   font-size: 60px;
   line-height: 135%;
 }
-section .contactUs div h2 span, section .contactUs div span span {
+section .contactUs div h2 span,
+section .contactUs div span span {
   color: #E3B27D;
 }
 section .contactUs div button {
@@ -546,6 +520,7 @@ footer .footerContent .links ul {
   color: #AAAAAA;
 }
 footer .footerContent button {
+  max-width: 100%;
   margin-top: 30px;
   width: 150px;
   height: 40px;
@@ -577,4 +552,164 @@ footer .footerBottom div {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobileOption {
+    width: 100vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: fixed;
+    top: 10vh;
+    height: 90vh;
+    background-color: #222222;
+  }
+  .mobileOption.open {
+    display: flex;
+  }
+  .mobileOption ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .mobileOption ul div.navMenu li {
+    border-bottom: 2px solid #111111;
+    background-color: #222222;
+    width: 100%;
+    padding: 2% 0;
+  }
+  .mobileOption ul div.navMenu ul.dropdown-menu.open {
+    display: flex;
+    width: 100%;
+    position: static;
+    border-left: none;
+  }
+  .mobileOption ul div.navMenu ul.dropdown-menu.open li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    padding: 0%;
+    background-color: #888888;
+  }
+  .HomeContent {
+    flex-wrap: wrap !important;
+  }
+  .contentBetween {
+    flex-wrap: wrap-reverse;
+  }
+  .contentBetween img {
+    width: 100%;
+  }
+  .contentBetween div.contentText {
+    width: 100%;
+  }
+  div.contentCenter {
+    position: relative;
+  }
+  .contactUs {
+    height: auto !important;
+  }
+  .contactUs img {
+    position: static !important;
+  }
+  .contactUs div {
+    position: static !important;
+    height: 200px !important;
+  }
+  .contactUs div h2,
+  .contactUs div span {
+    font-size: 20px !important;
+  }
+  .contactUs div .contactButton {
+    width: 100px;
+    height: 100px;
+  }
+  .contentCenter div.agenceInfo {
+    width: 350px !important;
+    position: static !important;
+  }
+  footer .footerContent {
+    padding: 0%;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  footer .footerContent .leftFooter {
+    width: 40%;
+  }
+  footer .footerContent .leftFooter p {
+    width: 100%;
+    font-size: 13px;
+  }
+  footer .footerContent .rightFooter ul li {
+    font-size: 13px;
+  }
+}
+@media (max-width: 425px) {
+  .homeText h1 {
+    max-width: 100%;
+    font-size: 70px !important;
+  }
+  .headerSection {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .headerSection .sectionTitle {
+    width: 100% !important;
+  }
+  .headerSection .sectionTitle p.title {
+    width: 100%;
+  }
+  .headerSection .rightContent {
+    width: 100% !important;
+  }
+  .ourTeam {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .feedbackContent {
+    flex-wrap: wrap;
+  }
+  .feedbackContent .customerFeedback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .feedbackContent .customerFeedback img {
+    width: 95%;
+    padding: 2% 0%;
+  }
+  .feedbackContent .customerFeedback .customerInfo {
+    padding: 0% !important;
+  }
+  .feedbackContent .customerFeedback .customerInfo .customerImg {
+    width: 100px;
+  }
+  .feedbackContent .customerFeedback .customerInfo img {
+    width: 30px;
+  }
+  .portfolio .portfolioDivision div {
+    width: 75% !important;
+  }
+  .portfolio .portfolioDivision div h3 {
+    font-size: 40px !important;
+  }
+  .contentBetween {
+    padding-bottom: 0% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
