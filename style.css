@@ -428,6 +428,92 @@ section .feedbackContent .customerFeedback .customerInfo p {
   font-size: 14px;
   line-height: 160%;
 }
+section .updatesblog {
+  margin-top: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 76px 76px;
+}
+section .updatesblog .post {
+  width: 42%;
+  height: 129px;
+}
+section .updatesblog .post div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section .updatesblog .post div .theme {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  color: #888888;
+  width: 75px;
+  border-right: 1px solid #888888;
+}
+section .updatesblog .post div .time {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+  color: #888888;
+  color: #E3B27D;
+}
+section .updatesblog .post .title {
+  margin-top: 17px;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 135%;
+}
+section .contactUs {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+section .contactUs img {
+  width: 100%;
+  position: relative;
+  left: 5.55%;
+}
+section .contactUs div {
+  width: 80%;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 10%;
+  background-color: #222222;
+  position: relative;
+  bottom: 45%;
+  right: 5.55%;
+}
+section .contactUs div h2 {
+  width: 70%;
+}
+section .contactUs div h2, section .contactUs div span {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 135%;
+}
+section .contactUs div h2 span, section .contactUs div span span {
+  color: #E3B27D;
+}
+section .contactUs div button {
+  width: 250px;
+  height: 250px;
+  background-color: #E3B27D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section .contactUs div button img {
+  margin: 0 auto;
+  width: 16px;
+  transform: rotate(-45deg);
+}
 
 footer .bg {
   padding-bottom: 0;
@@ -458,6 +544,23 @@ footer .footerContent .links ul {
   font-size: 15px;
   line-height: 182.5%;
   color: #AAAAAA;
+}
+footer .footerContent button {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  background-color: #E3B27D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  gap: 10px;
+}
+footer .footerContent button i {
+  width: 12px;
+}
+footer .footerContent button i img {
+  width: 12px;
 }
 footer .footerBottom {
   height: 10vh;

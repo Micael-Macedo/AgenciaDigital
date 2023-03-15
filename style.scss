@@ -522,6 +522,93 @@ section {
         }
 
     }
+
+    .updatesblog {
+        margin-top: 57px;
+        @include spaceBetween(center);
+        flex-wrap: wrap;
+        gap: 76px 76px;
+
+        .post {
+            width: 42%;
+            height: 129px;
+
+            div {
+                @include inline(center);
+                gap: 8px;
+
+                .theme {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 140%;
+                    color: $FifthColor;
+                    width: 75px;
+                    border-right: 1px solid $FifthColor;
+                }
+
+                .time {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 140%;
+                    color: $FifthColor;
+                    color: $SecondColor;
+                }
+            }
+
+            .title {
+                margin-top: 17px;
+                font-weight: 600;
+                font-size: 35px;
+                line-height: 135%;
+            }
+        }
+    }
+
+    .contactUs {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        img {
+            width: 100%;
+            position: relative;
+            left: 5.55%;
+        }
+
+        div {
+            width: 80%;
+            height: 370px;
+            @include spaceBetween(center);
+            padding: 0% 10%;
+            background-color: $ForthColor;
+            position: relative;
+            bottom: 45%;
+            right: 5.55%;
+            h2{
+                width: 70%;
+            }
+            h2, span {
+                font-weight: 600;
+                font-size: 60px;
+                line-height: 135%;
+                span{
+                     color: $SecondColor;
+                }
+            }
+            button{
+                width: 250px;
+                height: 250px;
+                background-color: $SecondColor;
+                border-radius: 50%;
+                @include spaceCenter(center);                
+                @include column();
+                img{
+                    margin: 0 auto;
+                    width: 16px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -554,6 +641,21 @@ footer {
 
             @include spaceCenter(top);
             gap: 10px;
+        }
+        button{
+            margin-top: 30px;
+            width: 150px;
+            height: 40px;
+            background-color: $SecondColor;
+            @include spaceCenter(center);
+            font-size: 13px;
+            gap: 10px;
+            i{
+                width: 12px;
+                img{
+                    width: 12px;
+                }
+            }
         }
     }
 
